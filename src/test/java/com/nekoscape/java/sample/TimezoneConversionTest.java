@@ -23,7 +23,7 @@ public class TimezoneConversionTest {
     @Test
     public void convertWithDefaultTimezone_test_for_beforeJava7Method() throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
-        String dateStr = "2016/03/12 02:00";
+        String dateStr = "2016/10/02 02:00";
         Date date = sdf.parse(dateStr);
         TimeZone timeZone = TimeZone.getDefault();
 
@@ -37,7 +37,7 @@ public class TimezoneConversionTest {
     @Test
     public void convertWithDefaultTimezone_test_for_Java8Method() throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT);
-        String dateStr = "2016/03/13 02:00";
+        String dateStr = "2016/10/02 02:00";
         Date date = sdf.parse(dateStr);
         TimeZone timeZone = TimeZone.getDefault();
 
