@@ -1,5 +1,6 @@
 package com.nekoscape.java.sample;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.text.ParseException;
@@ -13,6 +14,11 @@ import static org.junit.Assert.assertThat;
 public class TimezoneConversionTest {
 
     private static final String DATE_FORMAT = "yyyy/MM/dd HH:mm";
+
+    @BeforeClass
+    public static void beforeClass() {
+        TimeZone.setDefault(TimeZone.getTimeZone("Australia/Sydney"));
+    }
 
     @Test
     public void convertWithDefaultTimezone_test_for_beforeJava7Method() throws ParseException {
